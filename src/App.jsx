@@ -183,13 +183,22 @@ const PageRadar = ({ data, updateData }: { data: RadarState, updateData: (k: key
         </div>
         
         <div className="space-y-2 bg-black/20 p-3 rounded-xl border border-white/5">
-          <SliderControl label="Voix Intérieure (Moi)" value={data.inner} onChange={(v) => updateData('inner', v)} colorClass="accent-sky-500" />
-          <div className="grid grid-cols-2 gap-x-4">
-            <SliderControl label="Pairs/Amis" value={data.peers} onChange={(v) => updateData('peers', v)} colorClass="accent-red-400" />
-            <SliderControl label="Famille" value={data.family} onChange={(v) => updateData('family', v)} colorClass="accent-red-400" />
-            <SliderControl label="Médias" value={data.media} onChange={(v) => updateData('media', v)} colorClass="accent-red-400" />
-            <SliderControl label="Profs" value={data.professors} onChange={(v) => updateData('professors', v)} colorClass="accent-red-400" />
-          </div>
+<>
+  <SliderControl 
+    label="Voix Intérieure (Moi)" 
+    value={data.inner} 
+    onChange={(v) => updateData('inner', v)} 
+    colorClass="accent-sky-500" 
+  />
+
+  <div className="grid grid-cols-2 gap-x-4">
+    <SliderControl label="Pairs/Amis" value={data.peers} onChange={(v) => updateData('peers', v)} colorClass="accent-red-400" />
+    <SliderControl label="Famille" value={data.family} onChange={(v) => updateData('family', v)} colorClass="accent-red-400" />
+    <SliderControl label="Médias" value={data.media} onChange={(v) => updateData('media', v)} colorClass="accent-red-400" />
+    <SliderControl label="Profs" value={data.professors} onChange={(v) => updateData('professors', v)} colorClass="accent-red-400" />
+  </div>
+</>
+
         </div>
       </Card>
 
